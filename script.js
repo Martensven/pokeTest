@@ -227,7 +227,7 @@ async function fetchData() {
         imgElement.style.display = "block";
 
         const pokeType = data.types[0].type.name;
-        console.log(`${pokemonName}'s typing is: ${pokeType}`)
+        console.log(`${pokemonName} is a ${pokeType} type`)
 
 
 
