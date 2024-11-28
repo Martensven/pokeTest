@@ -1,0 +1,30 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: hwb(0 100% 0%);
+  width: 94%;
+  min-height: 94vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main h1 {
+  color: white;
+}
+main p {
+  color: white;
+}/*# sourceMappingURL=style.css.map */
