@@ -226,8 +226,11 @@ async function fetchData() {
         imgElement.src = pokemonSprite;
         imgElement.style.display = "block";
 
-        const pokeType = data.types[0].type.name;
-        console.log(`${pokemonName} is a ${pokeType} type`)
+        const pokeType1 = data.types[0].type.name;
+        // const poketype2 = data.types[1].type.name;
+
+        const pokemonType = document.getElementById('pokeType');
+        pokemonType.textContent = `${pokemonName}´s primary typing is ${pokeType1}`
 
     } catch (error) {
         console.error(error);
@@ -251,6 +254,7 @@ fetchJoke = () => {
             const punchLine = document.getElementById('punchLine');
             setup.textContent = data.setup;
             punchLine.textContent = data.punchline;
+            console.log(data);
         })
 
         .catch(error => {
