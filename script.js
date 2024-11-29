@@ -229,21 +229,37 @@ async function fetchData() {
         const pokeType = data.types[0].type.name;
         console.log(`${pokemonName} is a ${pokeType} type`)
 
-
-
     } catch (error) {
         console.error(error);
     }
 }
 
+const apiUrl = 'https://official-joke-api.appspot.com/random_joke';
 
-// fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
-//     .then(response => {
-//         if (!response.ok) {
-//             throw new Error("Could not fetch");
-//         }
-//         return response.json();
-//     })
-//     .then(data => console.log(data))
-//     .catch(error => console.error(error));
 
+fetchJoke = () => {
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Hittade inga skämt, sorry, not sorry!');
+            }
+            return response.json();
+        })
+
+        .then(data => {
+            const setup = document.getElementById('setup');
+            const punchLine = document.getElementById('punchLine');
+            setup.textContent = data.setup;
+            punchLine.textContent = data.punchline;
+        })
+
+        .catch(error => {
+            console.error('Error: ', error);
+        });
+
+        setTimeout(() => {
+            const jokeButton = document.getElementById('Btn2')
+        jokeButton.textContent = 'Another please!'
+        }, 1000);
+        
+}
