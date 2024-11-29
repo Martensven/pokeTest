@@ -260,6 +260,6 @@ fetchJoke = () => {
         setTimeout(() => {
             const jokeButton = document.getElementById('Btn2')
         jokeButton.textContent = 'Another please!'
-        }, 1000);
+        }, 2000);
         
 }
