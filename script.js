@@ -252,9 +252,9 @@ fetchJoke = () => {
         .then(data => {
             const setup = document.getElementById('setup');
             const punchLine = document.getElementById('punchLine');
+
             setup.textContent = data.setup;
             punchLine.textContent = data.punchline;
-            console.log(data);
         })
 
         .catch(error => {
